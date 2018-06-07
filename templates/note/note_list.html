@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Главная</title>
 </head>
 <body>
-    <h1>Notes</h1>
+    <a href="{% url 'add_note' %}">Добавить заметку</a>
+    <h1>Заметки</h1>
     <ul>
         {% for note in notes_list %}
             <li>{{ note.note_text }}</li>

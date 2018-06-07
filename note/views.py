@@ -16,8 +16,6 @@ class AllNotesList(ListView):
             temp = re.sub(r'[,;:"!?\.\[\]\(\)]', ' ', note.note_text)
             # removing single quotes (leaving the apostrophes)
             temp = re.sub(r'[^a-zA-Zа-яА-Я]\'|\'[^a-zA-Zа-яА-Я]|^\'|\'$', ' ', temp)
-            for t in temp:
-                print('!',t,'!')
             count = len(set(temp.split()))
             return count
         notes_list = Note.objects.all()

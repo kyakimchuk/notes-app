@@ -5,6 +5,8 @@
     <title>Добавление заметки</title>
 </head>
 <body>
+    <a href="{% url 'home' %}">Список заметок (Главная)</a>
+    <h1>Добавить заметку</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}

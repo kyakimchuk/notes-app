@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Успех</title>
 </head>
 <body>
     <p>Данные сохранены успешно!</p>
-    <p><a href="{{ request.META.HTTP_REFERER }}">Вернуться на предыдущую страницу</a></p>
+    <p><a href="{% url 'add_note' %}">Добавить заметку</a></p>
+    <p><a href="{% url 'home' %}">Список заметок (Главная)</a></p>
 </body>
 </html>
